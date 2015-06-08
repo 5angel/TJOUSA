@@ -229,3 +229,15 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Project
+# =========================
+
+.tscache/
+*.js
+*.js.map
+*.d.ts
+!**/app/*.d.ts
+dist/
+bower_components/
+*.dat

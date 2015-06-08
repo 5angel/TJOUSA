@@ -1,0 +1,14 @@
+{
+  "name": "TJTest",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.10.2",
+    "angular": "^1.3.15",
+    "requirejs": "^2.1.17"
+  },
+  "exportsOverride": {
+    "requirejs": {
+      "js": "require.js"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "TJTest",
+  "version": "0.0.0",
+  "private": true,
+  "description": "TJournal test project",
+  "author": {
+    "name": "5angel",
+    "email": "vladsenator@gmail.com"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bower-task": "^0.4.0",
+    "tsd": "^0.6.1",
+    "grunt-tsd": "^0.1.0",
+    "typescript": "^1.5.0-beta",
+    "grunt-ts": "^4.1.0",
+    "grunt-contrib-less": "^1.0.1"
+  }
+}
