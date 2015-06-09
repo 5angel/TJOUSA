@@ -25,12 +25,15 @@
     <None Include="bower.json" />
     <Content Include="gruntfile.js" />
     <Content Include="index.html" />
+    <TypeScriptCompile Include="typings\app\global.d.ts" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="src\ts\app.ts" />
     <TypeScriptCompile Include="src\ts\controllers\MainCtrl.ts" />
     <TypeScriptCompile Include="src\ts\main.ts" />
+    <TypeScriptCompile Include="src\ts\misc\utils.ts" />
+    <TypeScriptCompile Include="src\ts\services\TJAPIService.ts" />
     <TypeScriptCompile Include="typings\angularjs\angular.d.ts" />
     <TypeScriptCompile Include="typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="typings\requirejs\require.d.ts" />
@@ -46,9 +49,7 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="dist\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
   </PropertyGroup>
