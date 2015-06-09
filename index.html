@@ -9,6 +9,10 @@
     <script data-main="dist/main" src="dist/lib/requirejs/js/require.js"></script>
 </head>
 <body data-ng-controller="MainCtrl as main">
-    <h1>TJournal Test App</h1>
+    <div class="user">
+        <h1 class="user__name" data-ng-bind="main.user.name"></h1>
+        <img class="user__pic" src="" data-ng-src="{{ main.user.profile_image_url }}" border="0" />
+        <span class="user__karma" data-ng-bind="main.user.rating.karma"></span>
+    </div>
 </body>
 </html>

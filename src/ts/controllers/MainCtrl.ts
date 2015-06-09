@@ -8,8 +8,10 @@ var USERS_MAX: number = 48279;
 class MainCtrl {
     static $inject: string[] = ["$TJAPI"];
 
+    user: IAccountInfo;
+
     protected onAccountInfo(data: IAccountInfo) {
-        console.log(data);
+        this.user = data;
     }
 
     constructor($TJAPI: TJAPIService) {

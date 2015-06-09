@@ -8,7 +8,7 @@ class TJAPIService {
     }
 
     accountInfo(userId: number): ng.IHttpPromise<IAccountInfo> {
-        return this.$http.get(API_URL + "account/", {
+        return this.$http.get(API_URL + "account/info", {
             params: { userId }
         });
     }

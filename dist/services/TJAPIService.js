@@ -5,7 +5,7 @@ define(["require", "exports"], function (require, exports) {
             this.$http = $http;
         }
         TJAPIService.prototype.accountInfo = function (userId) {
-            return this.$http.get(API_URL + "account/", {
+            return this.$http.get(API_URL + "account/info", {
                 params: { userId: userId }
             });
         };
