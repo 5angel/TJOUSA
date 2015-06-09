@@ -237,8 +237,8 @@ $RECYCLE.BIN/
 *.js
 *.js.map
 *.d.ts
+!dist/**/*.js
 !**/app/*.d.ts
-dist/
 bower_components/
 *.dat
 .baseDir.ts
