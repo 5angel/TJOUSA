@@ -2,7 +2,8 @@ define(["require", "exports", "misc/utils"], function (require, exports, utils) 
     var USERS_MAX = 48279;
     var MainCtrl = (function () {
         function MainCtrl($TJAPI) {
-            $TJAPI.accountInfo(utils.getRandomArbitrary(USERS_MAX))
+            var userId = Math.floor(utils.getRandomArbitrary(USERS_MAX));
+            $TJAPI.accountInfo(userId)
                 .success(this.onAccountInfo.bind(this));
         }
         MainCtrl.prototype.onAccountInfo = function (data) {

@@ -237,6 +237,7 @@ $RECYCLE.BIN/
 *.js
 *.js.map
 *.d.ts
+!tsd.d.ts
 !dist/**/*.js
 !**/app/*.d.ts
 bower_components/
