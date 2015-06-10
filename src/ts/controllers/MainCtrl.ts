@@ -1,24 +1,46 @@
 ﻿// misc
 import utils = require("misc/utils");
+import TJAPIDefaults = require("misc/TJAPIDefaults");
 // services
 import TJAPIService = require("services/TJAPIService");
 
-var USERS_MAX: number = 48279;
+var PAPERS_PER_PAGE: number = 20;
 
 class MainCtrl {
     static $inject: string[] = ["$TJAPI"];
 
-    user: IAccountInfo;
+    papers: IPaper[];
 
-    protected onAccountInfo(data: IAccountInfo) {
-        this.user = data;
+    protected parseContent() {
+        var that = this;
+
+        var content: IPaper[] = [];
+
+        that.api.paper({ count: PAPERS_PER_PAGE })
+            .then((response: ng.IHttpPromiseCallbackArg<IPaper[]>): ng.IPromise<IClub[]> => {
+                content.push.apply(content, response.data);
+
+                return that.api.club({ count: PAPERS_PER_PAGE });
+            })
+            .then((response: ng.IHttpPromiseCallbackArg<IClub[]>): ng.IPromise<IClub[]> => {
+                content.push.apply(content, response.data.map(utils.process.clubToPaper));
+
+                return that.api.club({
+                    count: PAPERS_PER_PAGE,
+                    category: TJAPIDefaults.Club.Category.OFFTOPIC
+                });
+            })
+            .then((response: ng.IHttpPromiseCallbackArg<IClub[]>) => {
+                content.push.apply(content, response.data.map(utils.process.clubToPaper));
+
+                content.sort(utils.sort.papersByDate);
+
+                that.papers = content;
+            });
     }
 
-    constructor($TJAPI: TJAPIService) {
-        var userId: number = Math.floor(utils.getRandomArbitrary(USERS_MAX));
-
-        $TJAPI.accountInfo(userId)
-            .success(this.onAccountInfo.bind(this));
+    constructor(protected api: TJAPIService) {
+        this.parseContent();
     }
 }
 

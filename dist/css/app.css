@@ -1,0 +1,53 @@
+body {
+  background-color: #f5f5f5;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+.container {
+  width: 1020px;
+  margin: 0 auto;
+}
+.paper-list {
+  margin: 0 -10px;
+  padding: 0;
+  list-style: none;
+}
+.paper-list__item {
+  display: inline-block;
+  width: 320px;
+  margin: 10px;
+  vertical-align: top;
+  background-color: white;
+}
+.pp-link {
+  display: block;
+  height: 266px;
+  border: 1px solid #dbdbdb;
+  padding: 8px 12px;
+  color: #333333;
+}
+.pp-link:hover {
+  border: 1px solid #cccccc;
+  color: black;
+}
+.pp-link__figure {
+  overflow: hidden;
+  height: 160px;
+  margin: -8px -12px 8px;
+}
+.pp-link__figure__image {
+  width: 100%;
+  margin-top: -10px;
+}
+.pp-link__title {
+  font-size: 1.2rem;
+}
+.pp-link__subtitle {
+  font-size: 1rem;
+  font-weight: normal;
+}

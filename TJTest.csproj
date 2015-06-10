@@ -26,6 +26,7 @@
     <Content Include="gruntfile.js" />
     <Content Include="index.html" />
     <TypeScriptCompile Include="typings\app\global.d.ts" />
+    <TypeScriptCompile Include="src\ts\misc\TJAPIDefaults.ts" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +43,7 @@
   <ItemGroup>
     <Content Include="package.json" />
     <Content Include="tsd.json" />
+    <Content Include="src\less\app.less" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

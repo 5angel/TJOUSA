@@ -4,15 +4,28 @@
 <head>
     <meta charset="utf-8" />
     <title>TJournal Test App</title>
-    <link rel="stylesheet" href="app.css" type="text/css" />
+    <link rel="stylesheet" href="dist/lib/semantic/css/semantic.css" type="text/css" />
+    <link rel="stylesheet" href="dist/css/app.css" type="text/css" />
     <script src="dist/lib/angular/angular.js"></script>
-    <script data-main="dist/main" src="dist/lib/requirejs/js/require.js"></script>
+    <script data-main="dist/js/main" src="dist/lib/requirejs/js/require.js"></script>
 </head>
 <body data-ng-controller="MainCtrl as main">
-    <div class="user">
-        <h1 class="user__name" data-ng-bind="main.user.name"></h1>
-        <img class="user__pic" src="" data-ng-src="{{ main.user.profile_image_url }}" border="0" />
-        <span class="user__karma" data-ng-bind="main.user.rating.karma"></span>
+    <div class="container">
+        <ul class="paper-list">
+            <li class="paper-list__item"
+                data-ng-repeat="paper in main.papers">
+                <a class="pp-link" data-ng-href="{{ paper.url }}">
+                    <figure class="pp-link__figure"
+                            data-ng-if="paper.picture_big_url">
+                        <img class="pp-link__figure__image" data-ng-src="{{ paper.picture_big_url }}" border="0" />
+                    </figure>
+                    <header>
+                        <h2 class="pp-link__title" data-ng-bind="paper.title"></h2>
+                        <!--<h3 class="pp-link__subtitle" data-ng-bind="paper.subtitle"></h3>-->
+                    </header>
+                </a>
+            </li>
+        </ul>
     </div>
 </body>
 </html>

@@ -4,11 +4,16 @@
   "dependencies": {
     "jquery": "~1.10.2",
     "angular": "^1.3.15",
-    "requirejs": "^2.1.17"
+    "requirejs": "^2.1.17",
+    "semantic": "^1.12.3"
   },
   "exportsOverride": {
     "requirejs": {
       "js": "require.js"
+    },
+    "semantic": {
+      "js": "dist/semantic.js",
+      "css": "dist/semantic.css"
     }
   }
 }

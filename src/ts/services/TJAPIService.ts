@@ -1,4 +1,5 @@
-﻿var API_URL: string = "https://api.tjournal.ru/2/";
+﻿// misc
+import TJAPIDefaults = require("misc/TJAPIDefaults");
 
 class TJAPIService {
     static $inject: string[] = ["$http"];
@@ -7,8 +8,16 @@ class TJAPIService {
         
     }
 
+    paper(params?: IPaperParams): ng.IHttpPromise<IPaper[]> {
+        return this.$http.get(TJAPIDefaults.API_URL + "paper", { params });
+    }
+
+    club(params?: IClubParams): ng.IHttpPromise<IClub[]> {
+        return this.$http.get(TJAPIDefaults.API_URL + "club", { params });
+    }
+
     accountInfo(userId: number): ng.IHttpPromise<IAccountInfo> {
-        return this.$http.get(API_URL + "account/info", {
+        return this.$http.get(TJAPIDefaults.API_URL + "account/info", {
             params: { userId }
         });
     }
