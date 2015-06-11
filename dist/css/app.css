@@ -23,20 +23,20 @@ h5 {
   padding: 20px 0 10px;
   text-align: center;
 }
-.main-header__dilimiter {
-  margin-top: -20px;
-}
 .main-header__subtitle {
+  margin-top: 0;
   font-family: Verdana, sans-serif;
   font-size: 16px;
 }
 #TJOUSA {
   display: inline-block;
   position: relative;
+  width: 200px;
+  height: 200px;
   margin: 0;
-  padding: 0 4px;
+  background-image: url("../i/logo.png");
   background-color: #f5f5f5;
-  font: bold 36px Verdana, sans-serif;
+  font-size: 0;
 }
 .main-container {
   width: 1000px;
