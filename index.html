@@ -11,7 +11,9 @@
 </head>
 <body data-ng-cloak data-ng-controller="MainCtrl as main">
     <header class="main-header">
-        <h1 id="TJOUSA">TJOUSA</h1>
+        <a href="http://5angel.github.io/TJOUSA/">
+            <h1 id="TJOUSA">TJOUSA</h1>
+        </a>
         <h2 class="main-header__subtitle">Нефильтрованная. Твоя.</h2>
     </header>
     <div class="main-container">
@@ -29,7 +31,7 @@
                     </header>
                 </a>
                 <footer class="pp-meta">
-                    <a class="pp-meta__external"
+                    <a class="pp-meta__external" href="" target="_blank"
                        data-ng-if="paper.external_link !== null"
                        data-ng-href="{{ paper.external_link_wrapped }}"
                        data-ng-bind="main.getDomain(paper.external_link)"></a>
