@@ -89,7 +89,7 @@ export module process {
             comments_count: club.comments_count,
             hits: club.hits,
             category: club.category,
-            picture_big_url: picture,
+            picture_big_url: picture || TJAPIDefaults.Picture.PICTURE_BLANK_URL,
             isFavorited: club.isFavorited,
             date: club.date
         };

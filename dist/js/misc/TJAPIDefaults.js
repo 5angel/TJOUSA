@@ -4,6 +4,10 @@ define(["require", "exports"], function (require, exports) {
     (function (User) {
         User.COUNT_MAX = 48279;
     })(User = exports.User || (exports.User = {}));
+    var Picture;
+    (function (Picture) {
+        Picture.PICTURE_BLANK_URL = "dist/i/picture_blank.png";
+    })(Picture = exports.Picture || (exports.Picture = {}));
     var Club;
     (function (Club) {
         Club.COUNT_MAX = 50;
