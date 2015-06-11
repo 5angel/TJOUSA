@@ -1,5 +1,13 @@
+@wrap-width: 1000px;
+
 body {
     background-color: lighten(black, 96);
+}
+
+hr {
+    margin: 10px 0;
+    border: 0;
+    border-bottom: 1px solid lighten(black, 50);
 }
 
 h1, h2, h3, h4, h5 {
@@ -7,8 +15,36 @@ h1, h2, h3, h4, h5 {
   font-weight: normal;
 }
 
+.main-header, .main-footer__wrap {
+    width: @wrap-width;
+    margin: 0 auto;
+}
+
+.main-header {
+    padding: 20px 0 10px;
+    text-align: center;
+}
+
+.main-header__dilimiter {
+    margin-top: -20px;
+}
+
+.main-header__subtitle {
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+}
+
+#TJOUSA {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0 4px;
+    background-color: lighten(black, 96);
+    font: bold 36px Verdana, sans-serif;
+}
+
 .main-container {
-    width: 1020px;
+    width: @wrap-width;
     margin: 0 auto;
 }
 
@@ -60,5 +96,11 @@ h1, h2, h3, h4, h5 {
 }
 
 .main-footer {
+    margin-top: 10px;
     background-color: lighten(black, 80);
+    font: 12px Verdana;
+}
+
+.main-footer__wrap {
+    padding: 10px 0;
 }

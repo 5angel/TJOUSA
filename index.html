@@ -9,7 +9,12 @@
     <script src="dist/lib/angular/angular.js"></script>
     <script data-main="dist/js/main" src="dist/lib/requirejs/js/require.js"></script>
 </head>
-<body data-ng-controller="MainCtrl as main">
+<body data-ng-cloak data-ng-controller="MainCtrl as main">
+    <header class="main-header">
+        <h1 id="TJOUSA">TJOUSA</h1>
+        <hr class="main-header__dilimiter" />
+        <h2 class="main-header__subtitle">Нефильтрованная. Твоя.</h2>
+    </header>
     <div class="main-container">
         <ul class="paper-list">
             <li class="paper-list__item"
@@ -28,7 +33,10 @@
         </ul>
     </div>
     <footer class="main-footer">
-
+        <div class="main-footer__wrap">
+            &copy; 2015 <a href="https://github.com/5angel/TJOUSA">TJOUSA</a>. Все права защищены.<br />
+            Создано при помощи <a href="https://github.com/tjournal/api">TJournal API</a>.
+        </div>
     </footer>
     <!-- GA -->
     <script>
