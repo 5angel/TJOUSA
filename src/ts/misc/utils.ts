@@ -1,4 +1,7 @@
-﻿export function getRandomArbitrary(max: number = Number.MAX_VALUE, min: number = 0) {
+﻿// misc
+import TJAPIDefaults = require("misc/TJAPIDefaults");
+
+export function getRandomArbitrary(max: number = Number.MAX_VALUE, min: number = 0) {
     return Math.random() * (max - min) + min;
 }
 
@@ -56,6 +59,20 @@ export module sort {
 
 export module process {
     export function clubToPaper(club: IClub): IPaper {
+        var picture: string = club.cover_image_url;
+
+        if (!picture && club.media) {
+            club.media.some((media: IClubMedia): boolean => {
+                var isPicture: boolean = media.type === TJAPIDefaults.Club.Media.IMAGE;
+
+                if (isPicture) {
+                    picture = media.thumbnail_url;
+                }
+
+                return isPicture;
+            });
+        }
+
         return {
             id: club.id,
             title: club.title,
@@ -72,6 +89,7 @@ export module process {
             comments_count: club.comments_count,
             hits: club.hits,
             category: club.category,
+            picture_big_url: picture,
             isFavorited: club.isFavorited,
             date: club.date
         };

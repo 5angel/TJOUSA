@@ -1,8 +1,8 @@
 {
-  "name": "TJTest",
-  "version": "0.0.0",
+  "name": "TJOUSA",
+  "version": "0.0.1",
   "private": true,
-  "description": "TJournal test project",
+  "description": "Alternative TJournal front page",
   "author": {
     "name": "5angel",
     "email": "vladsenator@gmail.com"

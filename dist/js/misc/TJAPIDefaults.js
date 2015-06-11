@@ -7,6 +7,10 @@ define(["require", "exports"], function (require, exports) {
     var Club;
     (function (Club) {
         Club.COUNT_MAX = 50;
+        (function (Media) {
+            Media[Media["IMAGE"] = 1] = "IMAGE";
+        })(Club.Media || (Club.Media = {}));
+        var Media = Club.Media;
         var Category;
         (function (Category) {
             Category.NEWS = "news";

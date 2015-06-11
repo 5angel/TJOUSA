@@ -1,4 +1,4 @@
-define(["require", "exports"], function (require, exports) {
+define(["require", "exports", "misc/TJAPIDefaults"], function (require, exports, TJAPIDefaults) {
     function getRandomArbitrary(max, min) {
         if (max === void 0) { max = Number.MAX_VALUE; }
         if (min === void 0) { min = 0; }
@@ -38,6 +38,17 @@ define(["require", "exports"], function (require, exports) {
     var process;
     (function (process) {
         function clubToPaper(club) {
+            var picture = club.cover_image_url;
+            console.log(club);
+            if (!picture && club.media) {
+                club.media.some(function (media) {
+                    var isPicture = media.type === TJAPIDefaults.Club.Media.IMAGE;
+                    if (isPicture) {
+                        picture = media.thumbnail_url;
+                    }
+                    return isPicture;
+                });
+            }
             return {
                 id: club.id,
                 title: club.title,
@@ -54,6 +65,7 @@ define(["require", "exports"], function (require, exports) {
                 comments_count: club.comments_count,
                 hits: club.hits,
                 category: club.category,
+                picture_big_url: picture,
                 isFavorited: club.isFavorited,
                 date: club.date
             };

@@ -7,6 +7,10 @@ export module User {
 export module Club {
     export var COUNT_MAX: number = 50;
 
+    export enum Media {
+        IMAGE = 1
+    }
+
     export module Category {
         export var NEWS:     string = "news";
         export var OFFTOPIC: string = "offtopic";
