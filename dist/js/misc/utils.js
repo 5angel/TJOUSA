@@ -39,7 +39,6 @@ define(["require", "exports", "misc/TJAPIDefaults"], function (require, exports,
     (function (process) {
         function clubToPaper(club) {
             var picture = club.cover_image_url;
-            console.log(club);
             if (!picture && club.media) {
                 club.media.some(function (media) {
                     var isPicture = media.type === TJAPIDefaults.Club.Media.IMAGE;

@@ -9,7 +9,7 @@ h5 {
   font-family: 'Trebuchet MS', sans-serif;
   font-weight: normal;
 }
-.container {
+.main-container {
   width: 1020px;
   margin: 0 auto;
 }
@@ -43,7 +43,7 @@ h5 {
 }
 .pp-link__figure__image {
   width: 100%;
-  margin-top: -10px;
+  min-height: 100%;
 }
 .pp-link__title {
   font-size: 1.2rem;
@@ -51,4 +51,7 @@ h5 {
 .pp-link__subtitle {
   font-size: 1rem;
   font-weight: normal;
+}
+.main-footer {
+  background-color: #cccccc;
 }
