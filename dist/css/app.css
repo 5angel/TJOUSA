@@ -58,11 +58,12 @@ h5 {
   display: block;
   height: 266px;
   border: 1px solid #dbdbdb;
+  border-bottom-width: 0;
   padding: 8px 12px;
   color: #333333;
 }
 .pp-link:hover {
-  border: 1px solid #cccccc;
+  border-color: #b8b8b8;
   color: black;
 }
 .pp-link__figure {
@@ -80,6 +81,13 @@ h5 {
 .pp-link__subtitle {
   font-size: 1rem;
   font-weight: normal;
+}
+.pp-meta {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 12px;
+  border: 1px solid #dbdbdb;
+  border-top-color: #b8b8b8;
 }
 .main-footer {
   margin-top: 10px;

@@ -78,7 +78,7 @@ export module process {
             title: club.title,
             subtitle: GoogleCajaHTMLSanitizer.stripHTMLTags(club.entry),
             url: club.url,
-            external_link: club.external_link,
+            external_link: club.external_link || null,
             external_link_wrapped: club.external_link_wrapped,
             author: {
                 id: club.author.id,

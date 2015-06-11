@@ -26,6 +26,9 @@ define(["require", "exports", "misc/utils", "misc/TJAPIDefaults"], function (req
                 that.papers = content;
             });
         };
+        MainCtrl.prototype.getDomain = function (link) {
+            return link.split("/")[2];
+        };
         MainCtrl.$inject = ["$TJAPI"];
         return MainCtrl;
     })();

@@ -42,6 +42,10 @@ class MainCtrl {
     constructor(protected api: TJAPIService) {
         this.parseContent();
     }
+
+    getDomain(link: string): string {
+        return link.split("/")[2];
+    }
 }
 
 export = MainCtrl;

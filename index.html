@@ -29,6 +29,12 @@
                         <!--<h3 class="pp-link__subtitle" data-ng-bind="paper.subtitle"></h3>-->
                     </header>
                 </a>
+                <footer class="pp-meta">
+                    <a class="pp-meta__external"
+                       data-ng-if="paper.external_link !== null"
+                       data-ng-href="{{ paper.external_link_wrapped }}"
+                       data-ng-bind="main.getDomain(paper.external_link)"></a>
+                </footer>
             </li>
         </ul>
     </div>
