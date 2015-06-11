@@ -6,7 +6,7 @@
     <title>TJOUSA. Нефильтрованная. Твоя.</title>
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="dist/lib/semantic/css/semantic.css" type="text/css" />
-    <link rel="stylesheet" href="dist/lib/fontawesome/css/font-awesome.css.css" type="text/css" />
+    <link rel="stylesheet" href="dist/lib/fontawesome/css/font-awesome.css" type="text/css" />
     <link rel="stylesheet" href="dist/css/app.css" type="text/css" />
     <script src="dist/lib/angular/angular.js"></script>
     <script data-main="dist/js/main" src="dist/lib/requirejs/js/require.js"></script>
@@ -33,6 +33,9 @@
                     </header>
                 </a>
                 <footer class="pp-meta">
+                    <div class="pp-meta__hits">
+                        <i class="fa fa-eye"></i> {{ paper.hits }}
+                    </div>
                     <a class="pp-meta__external" href="" target="_blank"
                        data-ng-if="paper.external_link !== null"
                        data-ng-href="{{ paper.external_link_wrapped }}"

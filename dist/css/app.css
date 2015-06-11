@@ -83,11 +83,25 @@ h5 {
   font-weight: normal;
 }
 .pp-meta {
+  position: relative;
   height: 40px;
   line-height: 40px;
   padding: 0 12px;
   border: 1px solid #dbdbdb;
   border-top-color: #b8b8b8;
+}
+.pp-meta__hits {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 1;
+  margin-top: -8px;
+  margin-left: 8px;
+  padding: 0 4px;
+  background-color: white;
+  font-family: monospace;
+  color: #666666;
+  pointer-events: none;
 }
 .main-footer {
   margin-top: 10px;
