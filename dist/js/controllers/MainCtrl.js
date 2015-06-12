@@ -1,5 +1,5 @@
 define(["require", "exports", "misc/utils", "misc/TJAPIDefaults"], function (require, exports, utils, TJAPIDefaults) {
-    var PAPERS_PER_PAGE = 20;
+    var PAPERS_PER_PAGE = 10;
     var MainCtrl = (function () {
         function MainCtrl(api) {
             this.api = api;
@@ -28,6 +28,9 @@ define(["require", "exports", "misc/utils", "misc/TJAPIDefaults"], function (req
         };
         MainCtrl.prototype.getDomain = function (link) {
             return link.split("/")[2];
+        };
+        MainCtrl.prototype.getDateTime = function (date) {
+            return moment.unix(date).locale("ru").fromNow();
         };
         MainCtrl.$inject = ["$TJAPI"];
         return MainCtrl;

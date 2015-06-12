@@ -4,7 +4,7 @@ import TJAPIDefaults = require("misc/TJAPIDefaults");
 // services
 import TJAPIService = require("services/TJAPIService");
 
-var PAPERS_PER_PAGE: number = 20;
+var PAPERS_PER_PAGE: number = 10;
 
 class MainCtrl {
     static $inject: string[] = ["$TJAPI"];
@@ -45,6 +45,10 @@ class MainCtrl {
 
     getDomain(link: string): string {
         return link.split("/")[2];
+    }
+
+    getDateTime(date: number): string {
+        return moment.unix(date).locale("ru").fromNow();
     }
 }
 

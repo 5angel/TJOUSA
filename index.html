@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="dist/lib/semantic/css/semantic.css" type="text/css" />
     <link rel="stylesheet" href="dist/lib/fontawesome/css/font-awesome.css" type="text/css" />
     <link rel="stylesheet" href="dist/css/app.css" type="text/css" />
+    <script src="dist/lib/momentjs/js/moment-with-locales.js"></script>
     <script src="dist/lib/angular/angular.js"></script>
     <script data-main="dist/js/main" src="dist/lib/requirejs/js/require.js"></script>
 </head>
@@ -36,6 +37,7 @@
                     <div class="pp-meta__info">
                         <i class="fa fa-comments-o"></i> {{ paper.comments_count}} <i class="fa fa-eye"></i> {{ paper.hits }}
                     </div>
+                    <div class="pp-meta__date" data-ng-bind="main.getDateTime(paper.date)"></div>
                     <a class="pp-meta__external" href="" target="_blank"
                        data-ng-if="paper.external_link !== null"
                        data-ng-href="{{ paper.external_link_wrapped }}"
