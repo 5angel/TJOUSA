@@ -28,7 +28,7 @@ h5 {
   font-family: Verdana, sans-serif;
   font-size: 16px;
 }
-#TJOUSA {
+#TJOUZA {
   display: inline-block;
   position: relative;
   width: 200px;
@@ -90,7 +90,7 @@ h5 {
   border: 1px solid #dbdbdb;
   border-top-color: #b8b8b8;
 }
-.pp-meta__hits {
+.pp-meta__info {
   position: absolute;
   top: 0;
   left: 0;
